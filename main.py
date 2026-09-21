@@ -43,9 +43,11 @@ class Recapped(App):
         try:
             data = main(un)
             self.log(data)
+            self.title = un
+            self.sub_title = "recapped"
         except Exception:
             self.log(Exception)
-            self.notify("something went wrong", severity="error")
+            self.notify("Something went wrong.", severity="error")
             event.input.styles.display = "block"
             event.input.value = ""
             event.input.focus()
@@ -60,9 +62,5 @@ class Recapped(App):
         self.query_one("#mostStarred", Label).update(f"Most starred: {data["mostStarred"]}")
         self.query_one("#lang", Label).update(f"Fav language: {data["lang"][0][0]}")
 
-def main():
-    app = Recapped()
-    app.run()
-
-if __name__ == "__main__":
-    main()
+app = Recapped()
+app.run()

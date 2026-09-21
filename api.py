@@ -75,16 +75,16 @@ def getRepos(data):
     return repos
 
 def main(user):
-    user = getUser(user)
+    userdat = getUser(user)
     numberStarred = 0
     numberRepos = 0
     leastStars = float("inf")
     maxStars = 0
     totalStars = 0
     mostStarred = ""
-    age = date.today() - datetime.strptime(user["created_at"], "%Y-%m-%dT%H:%M:%SZ").date()
-    starred = getStarred(user)
-    repos = getRepos(user)
+    age = date.today() - datetime.strptime(userdat["created_at"], "%Y-%m-%dT%H:%M:%SZ").date()
+    starred = getStarred(userdat)
+    repos = getRepos(userdat)
     languages = Counter()
     for _ in starred:
         numberStarred += 1

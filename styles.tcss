@@ -6,7 +6,7 @@ Input {
 }
 
 Input:focus {
-    border: round #f56c6c;
+    border: round #344ed2;
     background: black;
 }
 
