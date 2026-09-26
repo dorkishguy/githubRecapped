@@ -5,6 +5,7 @@ from textual.containers import Center, Container, Middle
 from textual.widgets import Input, Header, Label
 from textual.app import App
 from textual.containers import Grid
+from textual_serve.server import Server
 
 class Recapped(App):
     CSS_PATH = "styles.tcss"
@@ -62,5 +63,6 @@ class Recapped(App):
         self.query_one("#mostStarred", Label).update(f"Most starred: {data["mostStarred"]}")
         self.query_one("#lang", Label).update(f"Fav language: {data["lang"][0][0]}")
 
-app = Recapped()
-app.run()
+if __name__ == "__main__":
+    app = Recapped()
+    app.run()
