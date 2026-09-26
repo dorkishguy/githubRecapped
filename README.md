@@ -6,13 +6,11 @@
 ```
 git clone https://github.com/dorkishguy/githubRecapped.git && cd githubRecapped
 ```
-- Run '''main.py'''
-'''
+- Run `main.py`
+```
 python main.py
-'''
+```
 
 - Input your username
 
 - Get your stats!
-
--# made with ❤️ for thirdspace.hackclub.com
